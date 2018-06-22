@@ -110,19 +110,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script src="{{asset('js/vendor/jquery-2.1.4.min.js')}}"></script>
-<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
 <script src="{{asset('js/plugins.js')}}"></script>
 <script src="{{asset('js/main.js')}}"></script>
-
-
-<script src="{{asset('js/lib/chart-js/Chart.bundle.js')}}"></script>
-<script src="{{asset('js/dashboard.js')}}"></script>
-<script src="{{asset('js/widgets.js')}}"></script>
-<script src="{{asset('js/lib/vector-map/jquery.vmap.js')}}"></script>
-<script src="{{asset('js/lib/vector-map/jquery.vmap.min.js')}}"></script>
-<script src="{{asset('js/lib/vector-map/jquery.vmap.sampledata.js')}}"></script>
-<script src="{{asset('js/lib/vector-map/country/jquery.vmap.world.js')}}"></script>
-
 <script src="{{asset('js/popper.min.js')}}"></script>
 
 
@@ -137,30 +127,38 @@
 <script src="{{asset('js/lib/data-table/buttons.print.min.js')}}"></script>
 <script src="{{asset('js/lib/data-table/buttons.colVis.min.js')}}"></script>
 <script src="{{asset('js/lib/data-table/datatables-init.js')}}"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.2/js/mdb.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/4.5.1/1/WebForms.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-json/2.6.0/jquery.json.min.js"></script>
+{{--<script type='text/javascript' src='webforms/ExperianEmailJsScripts/jquery/js/jquery.jsonp-2.4.0.js'></script>--}}
 
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#bootstrap-data-table-export').DataTable();
-    });
-</script>
-<script>
-    (function ($) {
-        "use strict";
+{{--<script type="text/javascript">--}}
+    {{--$(document).ready(function () {--}}
+        {{--$('#bootstrap-data-table-export').DataTable();--}}
+    {{--});--}}
+{{--</script>--}}
+{{--<script>--}}
+    {{--(function ($) {--}}
+        {{--"use strict";--}}
 
-        jQuery('#vmap').vectorMap({
-            map: 'world_en',
-            backgroundColor: null,
-            color: '#ffffff',
-            hoverOpacity: 0.7,
-            selectedColor: '#1de9b6',
-            enableZoom: true,
-            showTooltip: true,
-            values: sample_data,
-            scaleColors: ['#1de9b6', '#03a9f5'],
-            normalizeFunction: 'polynomial'
-        });
-    })(jQuery);
-</script>
+        {{--jQuery('#vmap').vectorMap({--}}
+            {{--map: 'world_en',--}}
+            {{--backgroundColor: null,--}}
+            {{--color: '#ffffff',--}}
+            {{--hoverOpacity: 0.7,--}}
+            {{--selectedColor: '#1de9b6',--}}
+            {{--enableZoom: true,--}}
+            {{--showTooltip: true,--}}
+            {{--values: sample_data,--}}
+            {{--scaleColors: ['#1de9b6', '#03a9f5'],--}}
+            {{--normalizeFunction: 'polynomial'--}}
+        {{--});--}}
+    {{--})(jQuery);--}}
+{{--</script>--}}
 </body>
 </html>

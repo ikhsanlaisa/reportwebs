@@ -32,3 +32,5 @@ Route::get('/listcategory', 'ReportController@show');
 Route::post('/add_progress', 'ReportController@store_report');
 
 Route::get('/listreport', 'HomeController@shows');
+
+Route::get('/listreport1', 'HomeController@shows');

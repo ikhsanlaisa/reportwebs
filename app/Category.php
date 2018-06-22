@@ -10,10 +10,10 @@ class Category extends Model
     protected $fillable = ['nama', 'project', 'tgl_target', 'target'];
 
     public function sub_category(){
-        $this->hasMany('App\Subcategory', 'category_id');
+        return $this->hasMany('App\SubCategory', 'category_id');
     }
 
     public function report(){
-        $this->hasMany('App\Report', 'category_id');
+        return $this->hasMany('App\Report', 'category_id');
     }
 }

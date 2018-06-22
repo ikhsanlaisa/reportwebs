@@ -27,14 +27,16 @@ class HomeController extends Controller
     public function index()
     {
         $category = Category::all();
-        return view('dashboard')->with('category', $category);
+        $report  = Report::with('category', 'subcategory')->get();
+//        dd($report);
+        return view('dashboard')->with(['category'=> $category, 'report'=>$report]);
     }
 
-    public function shows(){
-        $cat_id = Input::get('cat_id');
+    public function shows(Request $request){
+        $cat_id = $request->input('cat_id');
+//        $cat_id = $request->input('category_id');
         $sub_cat_id = Input::get('sub_cat');
-        $report = Report::where(['category_id'=>$cat_id])->get();
-        dd($report);
-//        return response()->json($report);
+        $report = Report::where('sub_category_id', $sub_cat_id)->get();
+        return response()->json($report);
     }
 }
