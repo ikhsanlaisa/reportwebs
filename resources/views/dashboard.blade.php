@@ -136,7 +136,9 @@
                         var myLineChart = new Chart(ctxL, {
                             type: 'line',
                             data: {
-                                labels: [returnJSON[0].tgl
+                                labels: [
+                                    // returnJSON[i].tgl,
+                                    returnJSON[0].tgl
                                     , returnJSON[1].tgl,returnJSON[2].tgl, returnJSON[3].tgl, returnJSON[4].tgl
                                 ]
                                 ,
@@ -150,8 +152,11 @@
                                         pointHighlightFill: "#fff",
                                         pointHighlightStroke: "rgba(151,187,205,1)",
                                         // data: [(obj.progress / 1000) * 100, (returnJSON[1].progress / 1000) * 100]
-                                        data: [(returnJSON[0].progress / 20000) * 100
-                                            , (returnJSON[1].progress / 20000) * 100, (returnJSON[2].progress / 20000) * 100, (returnJSON[3].progress / 20000) * 100, (returnJSON[4].progress / 20000) * 100
+                                        data: [
+                                            // (returnJSON[i].progress / returnJSON[i].subcategory.target) * 100,
+                                            (returnJSON[0].progress / returnJSON[0].subcategory.target) * 100, (returnJSON[1].progress / returnJSON[1].subcategory.target) * 100,
+                                            (returnJSON[2].progress / returnJSON[2].subcategory.target) * 100, (returnJSON[3].progress / returnJSON[3].subcategory.target) * 100,
+                                            (returnJSON[4].progress / returnJSON[4].subcategory.target) * 100
                                         ]
                                     }
                                 ]

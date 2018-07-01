@@ -24,12 +24,24 @@ class ReportController extends Controller
     }
 
     public function store_report(Request $request){
+//        $rp = Report::get('target');
+//        dd($rp);
+//          $sub = $request->input('sub_categories');
+//          $rp = Report::where('sub_category_id', '=', $sub)->where('progress')->get();
+//          foreach ($rp as $tg)
+//              $tg->total_tg = $rp->$request->progress->count();
+//              $tg->pg->count();
+//          }
+//            dd($tg);
+////
+////////          dd($rp);
         $report = new Report();
         $report->name = $request->input('name');
         $report->tgl = $request->input('tgl_target');
         $report->category_id = $request->input('category_id');
         $report->sub_category_id = $request->input('sub_categories');
         $report->progress = $request->input('target');
+        $report->note = $request->input('note');
         $result = $report->save();
         if ($result){
             alert()->success('Progress Harian Berhasil di Tambahkan', 'Selamat')->persistent('Tutup');

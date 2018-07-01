@@ -36,7 +36,7 @@ class HomeController extends Controller
         $cat_id = $request->input('cat_id');
 //        $cat_id = $request->input('category_id');
         $sub_cat_id = Input::get('sub_cat');
-        $report = Report::where('sub_category_id', $sub_cat_id)->get();
+        $report = Report::with('subcategory')->where('sub_category_id', $sub_cat_id)->get();
         return response()->json($report);
     }
 }

@@ -14,9 +14,11 @@
                             {{csrf_field()}}
                             <div class="card-body">
                                 <div class="row form-group">
-                                    <div class="col col-md-3"><label for="text" class=" form-control-label">Nama Pekerja:</label></div>
+                                    <div class="col col-md-3"><label for="text" class=" form-control-label">Nama
+                                            Pekerja:</label></div>
                                     <div class="col-9 col-md-9"><input type="text" id="name" name="name"
-                                                                       placeholder="Masukkan nama anda" class="form-control">
+                                                                       placeholder="Masukkan nama anda"
+                                                                       class="form-control">
                                     </div>
                                 </div>
 
@@ -34,7 +36,8 @@
                                     <div class="col col-md-3"><label for="text"
                                                                      class=" form-control-label">Project:</label>
                                     </div>
-                                    <div class="col-9 col-md-9"><select class="form-control" id="category_id" name="category_id"
+                                    <div class="col-9 col-md-9"><select class="form-control" id="category_id"
+                                                                        name="category_id"
                                                                         required>
                                             <option selected disabled>-Choose project-</option>
                                             @foreach($category as $c)
@@ -48,7 +51,8 @@
                                     <div class="col col-md-3"><label for="text"
                                                                      class=" form-control-label">SubProject:</label>
                                     </div>
-                                    <div class="col-9 col-md-9"><select class="form-control" name="sub_categories" id="sub_categories"
+                                    <div class="col-9 col-md-9"><select class="form-control" name="sub_categories"
+                                                                        id="sub_categories"
                                                                         required>
                                             <option selected="selected" disabled>-Choose SubProject-</option>
                                         </select>
@@ -59,7 +63,16 @@
                                     <div class="col col-md-3"><label for="text" class=" form-control-label">Target
                                             Project:</label></div>
                                     <div class="col-9 col-md-9"><input type="text" id="target" name="target"
-                                                                       placeholder="Score" class="form-control">
+                                                                       placeholder="Target" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col col-md-3"><label for="text"
+                                                                     class=" form-control-label">Note:</label></div>
+                                    <div class="col-9 col-md-9"><textarea type="text" id="note" name="note"
+                                                                          placeholder="Catatan"
+                                                                          class="form-control"></textarea>
                                     </div>
                                 </div>
 
