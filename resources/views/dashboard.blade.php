@@ -59,7 +59,6 @@
                                                                 <th>No</th>
                                                                 <th>Target Pengerjaan</th>
                                                                 <th>Tgl Kerja</th>
-                                                                <th>Nama Pekerja</th>
                                                                 <th>Project</th>
                                                                 <th>Sub Project</th>
                                                                 <th>Nilai Target</th>
@@ -73,7 +72,6 @@
                                                                     <td>{{$i++}}</td>
                                                                     <td>{{$r->category->tgl_target}}</td>
                                                                     <td>{{$r->tgl}}</td>
-                                                                    <td>{{$r->name}}</td>
                                                                     <td>{{$r->category->project}}</td>
                                                                     <td>{{$r->subcategory->sub_category}}</td>
                                                                     <td>{{$r->subcategory->target}}</td>
