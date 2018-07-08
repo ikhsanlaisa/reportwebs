@@ -31,6 +31,11 @@
     {{--SWEETALERT--}}
     <script src="{{asset('css/sweetalert2/dist/sweetalert2.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/sweetalert2/dist/sweetalert2.min.css')}}">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -133,37 +138,13 @@
 <script src="{{asset('js/lib/data-table/buttons.colVis.min.js')}}"></script>
 <script src="{{asset('js/lib/data-table/datatables-init.js')}}"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.2/js/mdb.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+{{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>--}}
+{{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>--}}
+{{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>--}}
+{{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>--}}
 {{--<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/4.5.1/1/WebForms.js"></script>--}}
 {{--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-json/2.6.0/jquery.json.min.js"></script>--}}
 {{--<script type='text/javascript' src='webforms/ExperianEmailJsScripts/jquery/js/jquery.jsonp-2.4.0.js'></script>--}}
 
-
-{{--<script type="text/javascript">--}}
-    {{--$(document).ready(function () {--}}
-        {{--$('#bootstrap-data-table-export').DataTable();--}}
-    {{--});--}}
-{{--</script>--}}
-{{--<script>--}}
-    {{--(function ($) {--}}
-        {{--"use strict";--}}
-
-        {{--jQuery('#vmap').vectorMap({--}}
-            {{--map: 'world_en',--}}
-            {{--backgroundColor: null,--}}
-            {{--color: '#ffffff',--}}
-            {{--hoverOpacity: 0.7,--}}
-            {{--selectedColor: '#1de9b6',--}}
-            {{--enableZoom: true,--}}
-            {{--showTooltip: true,--}}
-            {{--values: sample_data,--}}
-            {{--scaleColors: ['#1de9b6', '#03a9f5'],--}}
-            {{--normalizeFunction: 'polynomial'--}}
-        {{--});--}}
-    {{--})(jQuery);--}}
-{{--</script>--}}
 </body>
 </html>

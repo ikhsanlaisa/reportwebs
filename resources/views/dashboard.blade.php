@@ -129,15 +129,38 @@
                     var ctxL = document.getElementById("lineChart").getContext('2d');
                     // var a = returnJSON;
                     // $.each(returnJSON, function (index, obj) {
+                    var a = [];
+                    var b = [];
+                    var c = [];
+                    $.each(returnJSON, function (index, obj) {
+                        // c = {
+                        //     data:
+                                // a.push(
+                               a.push(obj['tgl'])
+                                // )
+                        // }
+
+                    });
+                    $.each(returnJSON, function (index, obj) {
+                        b.push((obj['progress'] / obj['subcategory']['target']) * 100)
+                    });
+                    console.log(a);
+                    // console.log(b);
+                    console.log(c);
                     for (var i = 0; i < returnJSON.length; i++) {
-                        console.log(returnJSON[i].tgl);
+                    //     a[i] = returnJSON[i]['tgl'];
+                    //     b[i] = (returnJSON[i]['progress'] / returnJSON[i]['subcategory']['target']) * 100;
+                    //     console.log(returnJSON[i].tgl);
+                    //     console.log(b);
+                    // }
                         var myLineChart = new Chart(ctxL, {
                             type: 'line',
                             data: {
                                 labels: [
-                                    // returnJSON[i].tgl,
-                                    returnJSON[0].tgl
-                                    , returnJSON[1].tgl,returnJSON[2].tgl, returnJSON[3].tgl, returnJSON[4].tgl
+                                    // c
+                                    returnJSON[0].tgl, returnJSON[1].tgl,
+                                    returnJSON[2].tgl, returnJSON[3].tgl,
+                                    // returnJSON[4].tgl
                                 ]
                                 ,
                                 datasets: [
@@ -151,10 +174,11 @@
                                         pointHighlightStroke: "rgba(151,187,205,1)",
                                         // data: [(obj.progress / 1000) * 100, (returnJSON[1].progress / 1000) * 100]
                                         data: [
-                                            // (returnJSON[i].progress / returnJSON[i].subcategory.target) * 100,
+                                            // b
+                                            // (returnJSON[i]['progress'] / returnJSON[i]['subcategory']['target']) * 100,
                                             (returnJSON[0].progress / returnJSON[0].subcategory.target) * 100, (returnJSON[1].progress / returnJSON[1].subcategory.target) * 100,
                                             (returnJSON[2].progress / returnJSON[2].subcategory.target) * 100, (returnJSON[3].progress / returnJSON[3].subcategory.target) * 100,
-                                            (returnJSON[4].progress / returnJSON[4].subcategory.target) * 100
+                                            // (returnJSON[4].progress / returnJSON[4].subcategory.target) * 100
                                         ]
                                     }
                                 ]
@@ -169,5 +193,62 @@
             });
         });
 
+    </script>
+    <script>
+        {{--jQuery(document).ready(function ($) {--}}
+            {{--$('#sub_categories').on('change', function (f) {--}}
+                {{--console.log(f);--}}
+                {{--var sub_cat = f.target.value;--}}
+                {{--nama = document.getElementById('name');--}}
+                {{--$.get('/listreport?sub_cat=' + sub_cat, {option: $(this).val()}, function (returnJSON) {--}}
+                    {{--// console.log(sub_cat);--}}
+                    {{--// console.log(returnJSON);--}}
+
+
+                    {{--var ctxL = document.getElementById("lineChart").getContext('2d');--}}
+                    {{--// var a = returnJSON;--}}
+                    {{--var a =[];--}}
+                    {{--// $.each(returnJSON, function (index, obj) {--}}
+                    {{--//     a.push(obj.tgl)--}}
+                    {{--// });--}}
+                    {{--// console.log(a);--}}
+
+                    {{--for (var i = 0; i < returnJSON.length; i++) {--}}
+                        {{--a[i] = returnJSON[i].tgl;--}}
+                        {{--// console.log(a.push(returnJSON[i].tgl));--}}
+                        {{--var myLineChart = new Chart(ctxL, {--}}
+                            {{--type: 'line',--}}
+                            {{--data: {--}}
+                                {{--labels: [ a--}}
+                                {{--]--}}
+                                {{--,--}}
+                                {{--datasets: [--}}
+                                    {{--{--}}
+                                        {{--label: "Progress Pengerjaan Project",--}}
+                                        {{--fillColor: "rgba(151,187,205,0.2)",--}}
+                                        {{--strokeColor: "rgba(151,187,205,1)",--}}
+                                        {{--pointColor: "rgba(151,187,205,1)",--}}
+                                        {{--pointStrokeColor: "#fff",--}}
+                                        {{--pointHighlightFill: "#fff",--}}
+                                        {{--pointHighlightStroke: "rgba(151,187,205,1)",--}}
+                                        {{--// data: [(obj.progress / 1000) * 100, (returnJSON[1].progress / 1000) * 100]--}}
+                                        {{--data: [--}}
+                                            {{--// (returnJSON[i].progress / returnJSON[i].subcategory.target) * 100,--}}
+                                            {{--// (returnJSON[0].progress / returnJSON[0].subcategory.target) * 100, (returnJSON[1].progress / returnJSON[1].subcategory.target) * 100,--}}
+                                            {{--// (returnJSON[2].progress / returnJSON[2].subcategory.target) * 100, (returnJSON[3].progress / returnJSON[3].subcategory.target) * 100,--}}
+                                            {{--// (returnJSON[4].progress / returnJSON[4].subcategory.target) * 100--}}
+                                        {{--]--}}
+                                    {{--}--}}
+                                {{--]--}}
+                            {{--},--}}
+                            {{--options: {--}}
+                                {{--responsive: true--}}
+                            {{--}--}}
+                        {{--});--}}
+                    {{--}--}}
+
+                {{--});--}}
+            {{--});--}}
+        {{--});--}}
     </script>
 @endsection
