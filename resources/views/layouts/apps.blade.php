@@ -76,6 +76,10 @@
                     <a href="/new/project"> <i class="menu-icon fa fa-plus-square-o"></i>Management Project</a>
                 </li>
 
+                <li class="active">
+                    <a href="/new/data"> <i class="menu-icon fa fa-plus-square-o"></i>Management Data</a>
+                </li>
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </nav>

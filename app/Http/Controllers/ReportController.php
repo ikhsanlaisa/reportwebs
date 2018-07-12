@@ -26,13 +26,20 @@ class ReportController extends Controller
 
     public function store_report(Request $request){
         $a = $request->input('sub_categories');
-        $rp = Report::where('sub_category_id', '=',$a)->sum('progress');
+        $rp = Report::select('progress')->where('sub_category_id', '=',$a)->latest('progress')->first();
+//        $c = $rp->progress;
+//        dd($c);
+//        dd($c);
         $report = new Report();
         $report->name = $request->input('name');
         $report->tgl = $request->input('tgl_target');
         $report->category_id = $request->input('category_id');
         $report->sub_category_id = $request->input('sub_categories');
-        $report->progress =$rp + $request->input('target');
+        if ($rp == null ) {
+            $report->progress = $request->input('target');
+        }else{
+            $report->progress = $rp->progress + $request->input('target');
+        }
         $report->note = $request->input('note');
         $result = $report->save();
         if ($result){

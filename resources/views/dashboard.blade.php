@@ -159,7 +159,8 @@
                                 labels: [
                                     // c
                                     returnJSON[0].tgl, returnJSON[1].tgl,
-                                    returnJSON[2].tgl, returnJSON[3].tgl,
+                                    returnJSON[2].tgl,
+                                    // returnJSON[3].tgl,
                                     // returnJSON[4].tgl
                                 ]
                                 ,
@@ -177,7 +178,8 @@
                                             // b
                                             // (returnJSON[i]['progress'] / returnJSON[i]['subcategory']['target']) * 100,
                                             (returnJSON[0].progress / returnJSON[0].subcategory.target) * 100, (returnJSON[1].progress / returnJSON[1].subcategory.target) * 100,
-                                            (returnJSON[2].progress / returnJSON[2].subcategory.target) * 100, (returnJSON[3].progress / returnJSON[3].subcategory.target) * 100,
+                                            (returnJSON[2].progress / returnJSON[2].subcategory.target) * 100,
+                                            // (returnJSON[3].progress / returnJSON[3].subcategory.target) * 100,
                                             // (returnJSON[4].progress / returnJSON[4].subcategory.target) * 100
                                         ]
                                     }
