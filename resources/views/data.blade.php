@@ -10,57 +10,66 @@
                             <button type="button" class="btn btn-inline btn-success btn-sm ladda-button"
                                     title="edit" name="button"
                                     data-toggle="modal" data-target="#modaledit"><span
-                                        class="fa fa-edit"></span>Tambah Data</button>
+                                        class="fa fa-edit"></span>Tambah Data
+                            </button>
                             {{--<button type="button" class="btn btn-primary">Primary</button>--}}
                         </div>
                         @if(!empty($data))
                             <div class="card-body">
-                                <table id="bootstrap-data-table"
-                                       class="table table-striped table-bordered">
-                                    <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Title</th>
-                                        <th>Description</th>
-                                        <th>Ref. RFI No</th>
-                                        <th>Date</th>
-                                        <th>Area</th>
-                                        <th>Status</th>
-                                        <th>Remake</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <?php $i = 1?>
-                                    @foreach($data as $d)
+                                <div class="table-responsive">
+                                    <table id="bootstrap-data-table"
+                                           class="table table-striped table-bordered">
+                                        <thead>
                                         <tr>
-                                            <td>{{$i++}}</td>
-                                            <td>{{$d->title}}</td>
-                                            <td>{{$d->description}}</td>
-                                            <td>{{$d->ref_number}}</td>
-                                            <td>{{$d->date}}</td>
-                                            <td>{{$d->area}}</td>
-                                            <td>{{$d->status}}</td>
-                                            <td>{{$d->note}}</td>
-                                            <td>
-                                                <center>
-                                                    <form action="/deletedata/{{$d->id}}" method="post" >
-                                                        {{csrf_field()}}
-                                                        <input type="hidden" name="_method" value="delete">
-                                                        <button type="button" class="btn btn-inline btn-success btn-sm ladda-button"
-                                                                onclick="showModal({{ $d->id }})" title="edit" name="button"
-                                                                data-toggle="modal" data-target="#modaledit1"><span
-                                                                    class="fa fa-edit"></span></button>
-
-                                                        <button type="delete" name="delete" id="btnhapus" value="delete" class="btn btn-inline btn-danger btn-sm ladda-button" onclick="return confirm('Are you sure to delete this data');"><i class="fa fa-trash"></i></button>
-                                                    </form>
-                                                </center>
-                                            </td>
+                                            <th>No</th>
+                                            <th>Title</th>
+                                            <th>Description</th>
+                                            <th>Ref. RFI No</th>
+                                            <th>Date</th>
+                                            <th>Area</th>
+                                            <th>Status</th>
+                                            <th>Remake</th>
+                                            <th>Aksi</th>
                                         </tr>
-                                    @endforeach
-                                    <?php ;?>
-                                    </tbody>
-                                </table>
+                                        </thead>
+                                        <tbody>
+                                        <?php $i = 1?>
+                                        @foreach($data as $d)
+                                            <tr>
+                                                <td>{{$i++}}</td>
+                                                <td>{{$d->title}}</td>
+                                                <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{$d->description}}</td>
+                                                <td>{{$d->ref_number}}</td>
+                                                <td>{{$d->date}}</td>
+                                                <td>{{$d->area}}</td>
+                                                <td>{{$d->status}}</td>
+                                                <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;">{{$d->note}}</td>
+                                                <td>
+                                                    <center>
+                                                        <form action="/deletedata/{{$d->id}}" method="post">
+                                                            {{csrf_field()}}
+                                                            <input type="hidden" name="_method" value="delete">
+                                                            <button type="button"
+                                                                    class="btn btn-inline btn-success btn-sm ladda-button"
+                                                                    onclick="showModal({{ $d->id }})" title="edit"
+                                                                    name="button"
+                                                                    data-toggle="modal" data-target="#modaledit1"><span
+                                                                        class="fa fa-edit"></span></button>
+
+                                                            <button type="delete" name="delete" id="btnhapus"
+                                                                    value="delete"
+                                                                    class="btn btn-inline btn-danger btn-sm ladda-button"
+                                                                    onclick="return confirm('Are you sure to delete this data');">
+                                                                <i class="fa fa-trash"></i></button>
+                                                        </form>
+                                                    </center>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                        <?php ;?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         @endif
                     </div>
@@ -78,7 +87,7 @@
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             {{--<div class="col-12">--}}
-                <div class="modal-content">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Tambah Data</h4>
                 </div>
@@ -96,7 +105,8 @@
                         <div class="form-group row">
                             <label class="col-sm-3 form-control-label">Item Description:</label>
                             <div class="col-sm-9">
-                                <textarea type="text" class="form-control" name="description" id="description"></textarea>
+                                <textarea type="text" class="form-control" name="description"
+                                          id="description"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -151,7 +161,7 @@
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             {{--<div class="col-12">--}}
-                <div class="modal-content">
+            <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="myModalLabel">Edit Data</h4>
                 </div>
@@ -169,7 +179,8 @@
                         <div class="form-group row">
                             <label class="col-sm-3 form-control-label">Item Description:</label>
                             <div class="col-sm-9">
-                                <textarea type="text" class="form-control" name="descriptions" id="descriptions"></textarea>
+                                <textarea type="text" class="form-control" name="descriptions"
+                                          id="descriptions"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -193,13 +204,14 @@
                             </div>
                         </div>
                         <div class="row form-group">
-                            <div class="col col-md-3"><label for="text" class=" form-control-label">Status:</label></div>
+                            <div class="col col-md-3"><label for="text" class=" form-control-label">Status:</label>
+                            </div>
                             <div class="col-sm-9"><select class="form-control" name="statuss" required>
                                     <option selected disabled>-Pilih Status-</option>
-<!--                                    --><?php //foreach ($lomba as $l) : ?>
+                                    <!--                                    --><?php //foreach ($lomba as $l) : ?>
                                     <option value="Open">Open</option>
                                     <option value="Close">Close</option>
-<!--                                    --><?php //endforeach ?>
+                                    <!--                                    --><?php //endforeach ?>
                                 </select>
                             </div>
                         </div>
@@ -222,7 +234,7 @@
     <!-- end modal -->
     <script>
         function showModal(id) {
-            document.getElementById('formEdit1').action = "/updatedata/"+ id;
+            document.getElementById('formEdit1').action = "/updatedata/" + id;
             console.log("diklik " + id);
             title = document.getElementById('titles');
             description = document.getElementById('descriptions');

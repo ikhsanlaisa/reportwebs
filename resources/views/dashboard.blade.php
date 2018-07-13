@@ -63,6 +63,7 @@
                                                                 <th>Sub Project</th>
                                                                 <th>Nilai Target</th>
                                                                 <th>Progress</th>
+                                                                <th>Note</th>
                                                             </tr>
                                                             </thead>
                                                             <tbody>
@@ -76,6 +77,7 @@
                                                                     <td>{{$r->subcategory->sub_category}}</td>
                                                                     <td>{{$r->subcategory->target}}</td>
                                                                     <td>{{$r->progress}}</td>
+                                                                    <td style="word-wrap: break-word;min-width: 100px;max-width: 75px;">{{$r->note}}</td>
                                                                 </tr>
                                                             @endforeach
                                                             <?php ;?>
